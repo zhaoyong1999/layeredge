@@ -151,7 +151,7 @@ setup_env() {
     cat >$ENV_FILE <<EOF
 GRPC_URL=grpc.testnet.layeredge.io:9090
 CONTRACT_ADDR=cosmos1ufs3tlq4umljk0qfe8k5ya0x6hpavn897u2cnf9k0en9jr7qarqqt56709
-ZK_PROVER_URL=http://127.0.0.1:3001
+ZK_PROVER_URL=http://127.0.0.1:3010
 API_REQUEST_TIMEOUT=100
 POINTS_API=http://127.0.0.1:8080
 EOF
@@ -247,6 +247,7 @@ EOF
 # 启用并启动服务
 start_services() {
     print_message "正在启用并启动服务..."
+    cd $LAYEREDGE_DIR
     systemctl daemon-reload
     systemctl enable layeredge-merkle.service
     systemctl enable layeredge-node.service
