@@ -416,7 +416,7 @@ show_banner() {
     echo -e "${NC}"
 }
 
-install_full $1;;
+install_full $1
 # check_status ;;
 
 # 主菜单
@@ -505,4 +505,4 @@ install_full $1;;
 # }
 
 # 执行主菜单
-main_menu
+# main_menu
